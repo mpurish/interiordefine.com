@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap');
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    margin: auto;
+    max-width: 1200px;
+}
+
+
+/* Section CSS */
+
+.banner-main {
+    background: url('../images/Background.jpg');
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-inner-text {
+    padding-top: 102px;
+}
+
+.banner-main h1 {
+    color: #dc6666;
+    font-weight: 600;
+    font-size: 80px;
+}
+
+.banner-main p {
+    font-size: 22px;
+    color: #676564;
+    margin-bottom: 10px;
+}
+
+.banner-main img {
+    margin-left: 22px;
+    margin-top: 0;
+}
+
+.banner-main small {
+    font-size: 18px;
+    color: #676564;
+}
+
+.btn-default:hover {
+    background: #b95353;
+    transition: 0.2s ease-in all;
+}
+
+.btn-default:hover img {
+    transform: translateX(8px);
+    transition: 0.2s ease-in all;
+}
+
+.btn-default {
+    font-size: 17px;
+    color: #fff;
+    background: #dc6666;
+    padding: 17px 0px;
+    border-radius: 50px;
+    margin-top: 28px;
+    max-width: 236px;
+    display: block;
+    transition: 0.2s ease-in all;
+    text-align: center;
+}
+
+button.tool-tip-button {
+    background: #fff;
+    cursor: pointer;
+    border: 0;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    outline: 0;
+    box-shadow: 2px 0 8px #0000006e;
+}
+
+button.tool-tip-button:hover {
+    background: #dc6666;
+}
+
+button.tool-tip-button img {
+    margin: 0px;
+    width: 17px;
+    margin-top: 5px;
+}
+
+.pin-one {
+    bottom: 42vh;
+    left: 18.5%;
+    position: fixed;
+}
+
+.pin-two {
+    position: fixed;
+    bottom: 20vh;
+    left: 26%;
+}
+
+.pin-three {
+    position: fixed;
+    bottom: 2vh;
+    left: 19%;
+}
+
+.pin-four {
+    position: fixed;
+    top: 58.5%;
+    right: 34%;
+}
+
+.pin-five {
+    position: fixed;
+    right: 8%;
+    top: 76%;
+}
+
+.pin-five .card {
+    left: -340px;
+}
+
+.card {
+    background: #fff;
+    padding: 0.75rem;
+    border-radius: 8px;
+    width: 300px;
+    position: absolute;
+    top: -65px;
+    left: 65px;
+}
+
+.card .card-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #D8D8D8;
+    margin-bottom: 10px;
+}
+
+.card .card-body .card-name label {
+    color: #676564;
+    font-size: 17px;
+}
+
+.card .card-body a.btn-default {
+    font-size: 13px;
+    padding: 10px 16px;
+    border-radius: 6px;
+    margin: -9px 0 0 0;
+}
+
+.card .card-body .card-name p {
+    font-size: 13px;
+    color: #676564;
+    margin-bottom: 10px;
+}
+
+.card .card-footer a {
+    color: #676564;
+    font-size: 13px;
+}
+
+.card .card-footer img {
+    width: 15px;
+    margin: 0;
+    margin-left: 10px;
+}
+
+.hovered {
+    display: none;
+}
+
+.tool-tip-button:hover .unhovered {
+    display: none;
+}
+
+.tool-tip-button:hover .hovered {
+    display: block;
+    margin: 0 auto !important;
+}
+
+button.tool-tip-button.active .unhovered {
+    display: none;
+}
+
+button.tool-tip-button.active .hovered {
+    display: block;
+    margin: 0 auto;
+}
+
+.tooltip.active .tool-tip-button {
+    background: #dc6666;
+}
+
+.tooltip.active .unhovered {
+    display: none;
+    margin: 0 auto;
+}
+
+.tooltip.active .hovered {
+    display: block;
+    margin: 0 auto;
+}
+
+.mobile {
+    display: none;
+}
+
+.banner-main.mobile.end {
+    background-position: right;
+}
+
+.banner-main.mobile.center {
+    background-position: center;
+}
+
+.swap-button {
+    width: 100%;
+    margin: auto;
+    border-radius: 8px;
+    display: block;
+    position: fixed;
+    bottom: 2vh;
+    align-items: center;
+}
+.swap-button .swap-button-inner {
+    background: #000000;
+    opacity: 0.5;
+    display: flex;
+    padding: 10px;
+    border-radius: 10px;
+    justify-content: space-between;
+    margin: 0 auto;
+    justify-items: center;
+    width: 36%;
+}
+.swap-button span {
+    color: #fff;
+    font-size: 15px;
+}
+
+.swap-button .swap-button-inner img {
+    margin: 0;
+    padding: 0;
+}
+
+.ui-loader.ui-corner-all.ui-body-a.ui-loader-default {
+    display: none;
+}
+
+
+/* Section CSS */
+
+
+/* media screens for adjustment of background */
+
+@media (max-width:1680px) {
+    .banner-main {
+        background-position: center -140px;
+    }
+    .pin-two {
+        bottom: 23vh;
+    }
+}
+
+@media (max-width:1600px) {
+    .banner-main {
+        background-position: center -200px;
+    }
+}
+
+@media (max-width:1440px) {
+    .banner-main {
+        background-position: center -129px;
+    }
+}
+
+@media (max-width:1366px) {
+    .container {
+        max-width: 1140px;
+    }
+    .pin-two {
+        bottom: 21vh;
+    }
+    .banner-inner-text {
+        padding-top: 12px;
+    }
+    button.tool-tip-button {
+        width: 32px;
+        height: 32px;
+    }
+    button.tool-tip-button img {
+        width: 14px;
+    }
+    .banner-inner-text {
+        padding-top: 42px;
+    }
+    .banner-main {
+        background-position: center -177px;
+    }
+}
+
+@media (max-width:1280px) {
+    .banner-main {
+        background-position: center;
+    }
+}
+
+@media (max-width:1024px) {
+    .banner-main h1 {
+        font-size: 62px;
+    }
+    .banner-main {
+        background-position: -32px 0px;
+    }
+    .banner-inner-text {
+        text-align: center;
+    }
+    .banner-inner-text a.btn-default {
+        margin: 20px auto 0;
+    }
+    .pin-one {
+        bottom: 43vh;
+        left: 17vw;
+    }
+    .pin-two {
+        bottom: 28vh;
+        left: 33vh;
+    }
+    .pin-three {
+        bottom: 12vh;
+        left: 24vh;
+    }
+    .pin-four {
+        bottom: 37.5vh;
+        right: 36vw;
+        top: auto;
+    }
+    .mobile-screen-3 .tooltip.pin-four {
+        bottom: 43vh;
+        left: 30vw;
+        top: auto;
+    }
+    .tooltip.pin-four .card {
+        top: 4vh;
+        left: -17vw;
+    }
+    .pin-five {
+        right: 6vw;
+        bottom: 28vh;
+        top: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-main h1 {
+        font-size: 62px;
+    }
+    .banner-main {
+        background-position: -32px 0px;
+    }
+    .banner-inner-text {
+        text-align: center;
+    }
+    .banner-inner-text a.btn-default {
+        margin: 20px auto 0;
+    }
+    .pin-one {
+        bottom: 43vh;
+        left: 31vw;
+    }
+    .pin-two {
+        bottom: 28vh;
+        left: 33vh;
+    }
+    .pin-three {
+        bottom: 12vh;
+        left: 24vh;
+    }
+    .pin-four {
+        bottom: 43vh;
+        right: 25vw;
+        top: auto;
+    }
+    .mobile-screen-3 .tooltip.pin-four {
+        bottom: 43vh;
+        left: 30vw;
+        top: auto;
+    }
+    .tooltip.pin-four .card {
+        top: 4vh;
+        left: -17vw;
+    }
+    .pin-five {
+        right: 15vw;
+        bottom: 27vh;
+    }
+    .banner-main {
+        transition: 0.8s ease all;
+    }
+    .card .card-name p {
+        max-width: 100% !important;
+        margin: 0;
+    }
+    .container {
+        max-width: 720px;
+    }
+    .banner-main .banner-inner-text {
+        text-align: center;
+        padding-top: 70px;
+    }
+    .banner-main h1 {
+        font-size: 42px;
+    }
+    .banner-main p {
+        font-size: 17px;
+    }
+    .banner-main small {
+        font-size: 15px;
+    }
+    .btn-default {
+        margin: 20px auto 0;
+    }
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+}
+
+@media (max-width:480px) {
+    .swap-button .swap-button-inner {
+        width: 45%;
+    }
+    .pin-one .card {
+        left: -82px;
+        top: 48px;
+    }
+    .pin-two .card {
+        top: -120px;
+        left: -178px;
+    }
+    .pin-three .card {
+        top: -122px;
+        left: -121px;
+    }
+    .tooltip.pin-four .card {
+        top: 7vh;
+        left: -228px;
+    }
+    .mobile-screen-3 .tooltip.pin-four .card {
+        top: 7vh;
+        left: -85px;
+    }
+    .pin-five .card {
+        left: -266px;
+        top: 40px;
+    }
+}
+@media (max-width:375px) {
+    .banner-main .banner-inner-text {
+        padding-top: 16px;
+    }
+    .banner-inner-text a.btn-default {
+        margin: 5px auto 0;
+    }
+}   
+
+@media (max-width:320px) {
+    .banner-main .banner-inner-text {
+        padding-top: 20px;
+    }
+    .banner-main p {
+        font-size: 12px;
+    }
+    .banner-main h1 {
+        font-size: 28px;
+    }
+    .banner-main small {
+        font-size: 12px;
+    }
+    .btn-default {
+        font-size: 14px;
+        max-width: 190px;
+        padding: 10px 0px;
+    }
+    .banner-main img {
+        margin-left: 14px;
+        margin-top: 0;
+        width: 15px;
+    }
+    .swap-button .swap-button-inner {
+        width: 52%;
+    }
+}
